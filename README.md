@@ -75,3 +75,26 @@ WhatsApp queda como respaldo.
 - Testimonios, preguntas frecuentes, mapa y botón de volver arriba
 - Favicon propio, datos estructurados (schema.org) y etiquetas Open Graph
 - Respeta `prefers-reduced-motion` para quienes desactivan animaciones
+
+## Versión de una sola página (para enseñar al cliente)
+
+`generar-demo.py` arma una copia del sitio completo en un único archivo HTML,
+con el CSS, el JavaScript y las imágenes incrustados. Las dos páginas pasan a
+ser dos vistas del mismo documento, así que la navegación sigue funcionando sin
+servidor: se puede abrir desde el escritorio, enviar por correo o subir a
+cualquier parte.
+
+```bash
+python3 generar-demo.py                 # genera demo/novedades-yaneth.html
+python3 generar-demo.py ~/muestra.html  # o en la ruta que indiques
+```
+
+Después de cargar prendas nuevas, vuelve a ejecutarlo para actualizar la copia.
+El archivo de `demo/` se genera: no lo edites a mano.
+
+## Publicar el sitio en internet
+
+La forma más rápida es **GitHub Pages**: en el repositorio, entra a
+*Settings → Pages*, elige la rama y guarda. En un par de minutos el sitio queda
+en `https://<usuario>.github.io/<repositorio>/`. También funciona arrastrando la
+carpeta a Netlify o Vercel, o subiéndola por FTP a un hosting propio.

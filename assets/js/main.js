@@ -173,7 +173,7 @@
   /* Scroll suave con desplazamiento por la barra fija */
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#"]');
-    if (!a) return;
+    if (!a || e.defaultPrevented) return;
     var id = a.getAttribute("href");
     if (id === "#" || id === "#!") return;
     var target = $(id);
@@ -190,7 +190,7 @@
      ========================================================== */
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("a");
-    if (!a || reduced) return;
+    if (!a || reduced || e.defaultPrevented || window.NY_ROUTER) return;
     var href = a.getAttribute("href");
     if (!href || a.target === "_blank" || a.hasAttribute("download")) return;
     if (href.charAt(0) === "#" || /^(https?:|mailto:|tel:)/i.test(href)) return;
@@ -285,28 +285,31 @@
       '</article>';
   }
 
+  /* Puede haber más de una grilla en el documento (destacados y catálogo
+     completo), así que trabajamos sobre todas las marcadas con .js-catalog. */
   function renderCatalog() {
-    var grid = $("#catalogGrid");
-    if (!grid || !window.CATALOGO) return;
-    var onlyFeatured = grid.hasAttribute("data-featured");
-    var items = window.CATALOGO.filter(function (x) { return onlyFeatured ? x.destacado : true; });
-    grid.innerHTML = items.map(pieceHTML).join("");
-    var count = $("#catalogCount");
-    if (count) count.textContent = items.length + " " + t("cat.count");
+    if (!window.CATALOGO) return;
+    $$(".js-catalog").forEach(function (grid) {
+      var onlyFeatured = grid.hasAttribute("data-featured");
+      var items = window.CATALOGO.filter(function (x) { return onlyFeatured ? x.destacado : true; });
+      grid.innerHTML = items.map(pieceHTML).join("");
+      observeReveals(grid);
+    });
     filterCatalog(currentFilter);
-    observeReveals(grid);
   }
 
   var currentFilter = "todos";
   function filterCatalog(cat) {
     currentFilter = cat;
-    var grid = $("#catalogGrid");
-    if (!grid) return;
+    var grids = $$(".js-catalog:not([data-featured])");
+    if (!grids.length) return;
     var visible = 0;
-    $$(".piece", grid).forEach(function (el) {
-      var show = cat === "todos" || el.getAttribute("data-cat") === cat;
-      el.classList.toggle("is-hidden", !show);
-      if (show) visible++;
+    grids.forEach(function (grid) {
+      $$(".piece", grid).forEach(function (el) {
+        var show = cat === "todos" || el.getAttribute("data-cat") === cat;
+        el.classList.toggle("is-hidden", !show);
+        if (show) visible++;
+      });
     });
     var empty = $("#catalogEmpty");
     if (empty) empty.classList.toggle("is-visible", visible === 0);
