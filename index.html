@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n-title="meta.title">Novedades Yaneth · Alquiler y venta de vestidos y ternos en Ilo</title>
+<meta name="description" content="Boutique en Ilo: alquiler y venta de vestidos de quinceañera, novia y gala, ternos para caballeros y trajes para niños. Distinción y elegancia.">
+<meta name="theme-color" content="#fbf7f9">
+<meta name="author" content="Novedades Yaneth">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Novedades Yaneth · Distinción y elegancia">
+<meta property="og:description" content="Alquiler y venta de vestidos y ternos para damas, caballeros y niños en Ilo.">
+<meta property="og:image" content="assets/img/logo-mark.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+<link rel="canonical" href="./index.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap"></noscript>
+
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<script>
+  /* Tema antes de pintar: evita el parpadeo al cargar */
+  (function () {
+    try {
+      var s = localStorage.getItem("ny-theme");
+      var d = s || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", d);
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", d === "dark" ? "#100a0f" : "#fbf7f9");
+    } catch (e) {}
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Novedades Yaneth",
+  "description": "Alquiler y venta de vestidos y ternos para damas, caballeros y niños.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Ilo", "addressRegion": "Moquegua", "addressCountry": "PE" },
+  "telephone": "+51933462410",
+  "openingHours": ["Mo-Sa 09:00-20:00", "Su 10:00-14:00"],
+  "priceRange": "S/ 85 - S/ 620"
+}
+</script>
+</head>
+
+<body class="is-loading">
+
+<!-- ============ PANTALLA DE CARGA ============ -->
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader__inner">
+    <img src="assets/img/logo-mark.svg" alt="" width="52" height="76">
+    <span class="loader__name">Novedades Yaneth</span>
+    <span class="loader__bar"><i></i></span>
+    <span class="sr-only">Cargando…</span>
+  </div>
+</div>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- ============ NAVEGACIÓN ============ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="index.html" aria-label="Novedades Yaneth · Inicio">
+      <img src="assets/img/logo-mark.svg" alt="" width="30" height="44">
+      <span class="brand__txt">
+        <span class="brand__top">Novedades</span>
+        <span class="brand__name">Yaneth</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Principal">
+      <a class="nav__link" href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a class="nav__link" href="#catalogo" data-i18n="nav.catalog">Catálogo</a>
+      <a class="nav__link" href="#proceso" data-i18n="nav.process">Cómo alquilar</a>
+      <a class="nav__link" href="#testimonios" data-i18n="nav.testimonials">Testimonios</a>
+      <a class="nav__link" href="#preguntas" data-i18n="nav.faq">Preguntas</a>
+      <a class="nav__link" href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="nav__tools">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Cambiar tema" data-i18n-attr="aria-label:nav.theme">
+        <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+
+      <a class="btn nav__cta" href="#contacto" data-i18n="nav.cta">Reservar cita</a>
+
+      <button class="icon-btn nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú" data-i18n-attr="aria-label:nav.menu">
+        <span class="burger-lines"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MENÚ MÓVIL ============ -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+  <a class="m-link" href="#servicios" data-i18n="nav.services">Servicios</a>
+  <a class="m-link" href="#catalogo" data-i18n="nav.catalog">Catálogo</a>
+  <a class="m-link" href="#proceso" data-i18n="nav.process">Cómo alquilar</a>
+  <a class="m-link" href="#testimonios" data-i18n="nav.testimonials">Testimonios</a>
+  <a class="m-link" href="#preguntas" data-i18n="nav.faq">Preguntas</a>
+  <a class="m-link" href="#contacto" data-i18n="nav.contact">Contacto</a>
+  <a class="btn btn--lg mobile-menu__cta" href="#contacto" data-i18n="nav.cta">Reservar cita</a>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+    <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow" data-reveal data-i18n="hero.eyebrow">Boutique en Ilo · Distinción y elegancia</p>
+        <h1 data-reveal style="--d:90ms">
+          <span data-i18n="hero.t1">Alquiler y venta de</span>
+          <span class="script" data-i18n="hero.t2">Vestidos &amp; Ternos</span>
+        </h1>
+        <p class="lead" data-reveal style="--d:180ms" data-i18n="hero.lead">
+          Para damas, caballeros y niños. Quinceañeras, novias, promociones y matrimonios.
+        </p>
+
+        <div class="hero__actions" data-reveal style="--d:260ms">
+          <a class="btn btn--lg" href="catalogo.html">
+            <span data-i18n="hero.cta1">Ver catálogo</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="https://wa.me/51933462410?text=%C2%A1Hola%20Novedades%20Yaneth!%20Quisiera%20informaci%C3%B3n%20sobre%20alquiler%20de%20prendas." target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.2 2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg>
+            <span data-i18n="hero.cta2">Escríbenos por WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="hero__stats" data-reveal style="--d:340ms">
+          <div><b data-count="+500">+500</b><span data-i18n="hero.s1l">Prendas disponibles</span></div>
+          <div><b data-count="12">12</b><span data-i18n="hero.s2l">Años de experiencia</span></div>
+          <div><b data-count="2">2</b><span data-i18n="hero.s3l">Tiendas en Ilo</span></div>
+        </div>
+
+        <p class="scroll-hint" data-reveal style="--d:420ms"><i aria-hidden="true"></i><span data-i18n="hero.scroll">Desliza para ver más</span></p>
+      </div>
+
+      <div class="hero__art" data-reveal="right" style="--d:200ms">
+        <figure><img src="assets/img/catalogo/g1.svg" alt="Vestido de quinceañera" width="600" height="1000" fetchpriority="high" decoding="async"></figure>
+        <figure><img src="assets/img/catalogo/g8.svg" alt="Terno para caballero" width="600" height="800" loading="lazy" decoding="async"></figure>
+        <figure><img src="assets/img/catalogo/g3.svg" alt="Vestido de gala" width="600" height="800" loading="lazy" decoding="async"></figure>
+        <span class="hero__badge"><i class="dot" aria-hidden="true"></i><span data-i18n="hero.badge">Atendemos hoy · Reserva tu prueba</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CINTA ============ -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon__track">
+      <span><span data-i18n="ribbon.1">Quinceañeras</span> ✦ <span data-i18n="ribbon.2">Novias</span> ✦ <span data-i18n="ribbon.3">Ternos a medida</span> ✦ <span data-i18n="ribbon.4">Promociones</span> ✦ <span data-i18n="ribbon.5">Paquete familiar</span> ✦ <span data-i18n="ribbon.6">Niños y niñas</span> ✦</span>
+      <span><span data-i18n="ribbon.1">Quinceañeras</span> ✦ <span data-i18n="ribbon.2">Novias</span> ✦ <span data-i18n="ribbon.3">Ternos a medida</span> ✦ <span data-i18n="ribbon.4">Promociones</span> ✦ <span data-i18n="ribbon.5">Paquete familiar</span> ✦ <span data-i18n="ribbon.6">Niños y niñas</span> ✦</span>
+    </div>
+  </div>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal data-i18n="svc.eyebrow">Lo que hacemos</p>
+        <h2 data-reveal style="--d:80ms" data-i18n="svc.title">Un servicio completo para tu evento</h2>
+        <p data-reveal style="--d:150ms" data-i18n="svc.sub">Desde la elección de la prenda hasta los ajustes finales.</p>
+      </div>
+
+      <div class="grid grid--3" data-stagger="110">
+        <article class="card" data-reveal>
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6a2 2 0 1 1 2-2c0 1.2-1 1.6-2 2v2"/><path d="M12 10 3.6 16.2A1 1 0 0 0 4.2 18h15.6a1 1 0 0 0 .6-1.8L12 10z"/></svg></div>
+          <h3 data-i18n="svc.1t">Alquiler de vestidos</h3>
+          <p data-i18n="svc.1d">Quinceañera, novia, gala y promoción.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div>
+          <h3 data-i18n="svc.2t">Venta y confección a medida</h3>
+          <p data-i18n="svc.2d">Confeccionamos tu prenda a medida.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 12 7l4-4"/><path d="M8 3 4 5v16h16V5l-4-2"/><path d="M12 7v14"/></svg></div>
+          <h3 data-i18n="svc.3t">Ternos para caballeros</h3>
+          <p data-i18n="svc.3d">Ternos de 2 y 3 piezas, slim fit o clásicos.</p>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5"/><path d="M16 14c2.8 0 5 1.4 5 4"/></svg></div>
+          <h3 data-i18n="svc.4t">Paquete familiar</h3>
+          <p data-i18n="svc.4d">Papá, mamá y niños con descuento especial.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATÁLOGO DESTACADO ============ -->
+  <section class="section section--tint" id="catalogo">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal data-i18n="cat.eyebrow">Catálogo</p>
+        <h2 data-reveal style="--d:80ms" data-i18n="cat.title">Piezas destacadas</h2>
+        <p data-reveal style="--d:150ms" data-i18n="cat.sub">Una muestra de lo que encontrarás en tienda.</p>
+      </div>
+
+      <div class="grid grid--4" id="catalogGrid" data-featured data-stagger="90"></div>
+
+      <div class="center" style="margin-top:2.5rem" data-reveal>
+        <a class="btn btn--lg" href="catalogo.html">
+          <span data-i18n="cat.all">Ver catálogo completo</span>
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA 1 ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band" data-reveal="zoom">
+        <h2 data-i18n="cta1.title">¿Tu evento se acerca?</h2>
+        <p data-i18n="cta1.sub">Reserva tu prueba sin costo y aparta tu prenda con solo el 30%.</p>
+        <div class="hero__actions">
+          <a class="btn btn--gold btn--lg" href="https://wa.me/51933462410?text=%C2%A1Hola!%20Quiero%20reservar%20una%20prueba." target="_blank" rel="noopener" data-i18n="cta1.b1">Reservar por WhatsApp</a>
+          <a class="btn btn--ghost btn--lg" href="catalogo.html" data-i18n="cta1.b2">Ver catálogo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO ============ -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal data-i18n="prc.eyebrow">Cómo alquilar</p>
+        <h2 data-reveal style="--d:80ms" data-i18n="prc.title">Tan simple como cuatro pasos</h2>
+      </div>
+      <div class="steps" data-stagger="120">
+        <div class="step" data-reveal><h3 data-i18n="prc.1t">Elige tu prenda</h3><p data-i18n="prc.1d">Mira el catálogo o visítanos en tienda.</p></div>
+        <div class="step" data-reveal><h3 data-i18n="prc.2t">Pruébatela</h3><p data-i18n="prc.2d">Prueba sin compromiso, tomamos medidas.</p></div>
+        <div class="step" data-reveal><h3 data-i18n="prc.3t">Reserva con 30%</h3><p data-i18n="prc.3d">Aparta tu fecha con el adelanto.</p></div>
+        <div class="step" data-reveal><h3 data-i18n="prc.4t">Recoge y disfruta</h3><p data-i18n="prc.4d">Recoge un día antes del evento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIOS ============ -->
+  <section class="section section--tint" id="testimonios">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal data-i18n="tst.eyebrow">Testimonios</p>
+        <h2 data-reveal style="--d:80ms" data-i18n="tst.title">Clientas y clientes que ya brillaron</h2>
+        <p data-reveal style="--d:150ms" data-i18n="tst.sub">Lo que nos cuentan después de su gran día.</p>
+      </div>
+
+      <div class="quotes" data-stagger="110">
+        <figure class="quote" data-reveal>
+          <div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg></div>
+          <blockquote><p data-i18n="tst.1">El vestido de quinceañera de mi hija quedó perfecto.</p></blockquote>
+          <figcaption class="quote__who"><span class="avatar" aria-hidden="true">RM</span><span><b data-i18n="tst.1n">Rosa Mamani</b><span data-i18n="tst.1r">Quinceañero · Ilo</span></span></figcaption>
+        </figure>
+
+        <figure class="quote" data-reveal>
+          <div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg></div>
+          <blockquote><p data-i18n="tst.2">Alquilé mi terno para el matrimonio y la calidad me sorprendió.</p></blockquote>
+          <figcaption class="quote__who"><span class="avatar" aria-hidden="true">CQ</span><span><b data-i18n="tst.2n">Carlos Quispe</b><span data-i18n="tst.2r">Matrimonio · Pacocha</span></span></figcaption>
+        </figure>
+
+        <figure class="quote" data-reveal>
+          <div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg></div>
+          <blockquote><p data-i18n="tst.3">Vestimos a toda la familia con el paquete familiar.</p></blockquote>
+          <figcaption class="quote__who"><span class="avatar" aria-hidden="true">FT</span><span><b data-i18n="tst.3n">Familia Ticona</b><span data-i18n="tst.3r">Bautizo · Ilo</span></span></figcaption>
+        </figure>
+
+        <figure class="quote" data-reveal>
+          <div class="stars" aria-label="5 de 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.9 1.2 7L12 18l-6.2 3.3L7 14.3 2 9.4l7-.9z"/></svg></div>
+          <blockquote><p data-i18n="tst.4">Me confeccionaron un vestido a medida en dos semanas.</p></blockquote>
+          <figcaption class="quote__who"><span class="avatar" aria-hidden="true">AF</span><span><b data-i18n="tst.4n">Andrea Flores</b><span data-i18n="tst.4r">Promoción · Moquegua</span></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIENDAS ============ -->
+  <section class="section" id="tiendas">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal data-i18n="str.eyebrow">Nuestras tiendas</p>
+        <h2 data-reveal style="--d:80ms" data-i18n="str.title">Visítanos y pruébate sin compromiso</h2>
+        <p data-reveal style="--d:150ms" data-i18n="str.sub">Dos locales en Ilo con probadores y asesoría personalizada.</p>
+      </div>
+
+      <div class="grid grid--3" data-stagger="120" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+        <figure class="piece" data-reveal="left">
+          <div class="piece__media" style="aspect-ratio:4/3">
+            <img src="assets/img/catalogo/g5.svg" alt="Fachada de la tienda principal" loading="lazy" decoding="async" width="600" height="450">
+          </div>
+          <figcaption class="piece__body">
+            <h3 data-i18n="str.1t">Tienda principal</h3>
+            <p class="piece__meta" data-i18n="str.1d">Alquiler y venta · vestidos y ternos</p>
+            <p class="piece__meta" data-i18n="str.photo">Foto de tienda pendiente</p>
+          </figcaption>
+        </figure>
+
+        <figure class="piece" data-reveal>
+          <div class="piece__media" style="aspect-ratio:4/3">
+            <img src="assets/img/catalogo/g11.svg" alt="Fachada de la segunda tienda" loading="lazy" decoding="async" width="600" height="450">
+          </div>
+          <figcaption class="piece__body">
+            <h3 data-i18n="str.2t">Segunda tienda</h3>
+            <p class="piece__meta" data-i18n="str.2d">Quinceañeras, novias y niños</p>
+            <p class="piece__meta" data-i18n="str.photo">Foto de tienda pendiente</p>
+          </figcaption>
+        </figure>
+
+        <div class="card" data-reveal="right">
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h3 data-i18n="ctc.addr">Dirección</h3>
+          <p data-i18n="ctc.addrv">Ilo, Moquegua · Perú</p>
+          <p data-i18n="ctc.hoursv">Lun a Sáb 9:00 – 20:00 · Dom 10:00 – 14:00</p>
+          <div class="hero__actions" style="margin-top:1.25rem">
+            <a class="btn" href="#contacto" data-i18n="nav.cta">Reservar cita</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS ============ -->
+  <section class="section section--tint" id="preguntas">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal data-i18n="faq.eyebrow">Preguntas frecuentes</p>
+        <h2 data-reveal style="--d:80ms" data-i18n="faq.title">Resolvemos tus dudas</h2>
+      </div>
+      <div class="faq" data-stagger="70">
+        <details class="acc" data-reveal><summary data-i18n="faq.q1">¿Con cuánta anticipación debo reservar?</summary><p data-i18n="faq.a1">Recomendamos entre 2 y 4 semanas antes.</p></details>
+        <details class="acc" data-reveal><summary data-i18n="faq.q2">¿Los ajustes tienen costo adicional?</summary><p data-i18n="faq.a2">Los ajustes básicos están incluidos.</p></details>
+        <details class="acc" data-reveal><summary data-i18n="faq.q3">¿Cuánto dura el alquiler?</summary><p data-i18n="faq.a3">El alquiler estándar es por 48 horas.</p></details>
+        <details class="acc" data-reveal><summary data-i18n="faq.q4">¿Debo lavar la prenda antes de devolverla?</summary><p data-i18n="faq.a4">No, la limpieza está incluida.</p></details>
+        <details class="acc" data-reveal><summary data-i18n="faq.q5">¿Qué formas de pago aceptan?</summary><p data-i18n="faq.a5">Efectivo, Yape, Plin y transferencia.</p></details>
+        <details class="acc" data-reveal><summary data-i18n="faq.q6">¿Hacen prendas a medida?</summary><p data-i18n="faq.a6">Sí, de 2 a 4 semanas según el diseño.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal data-i18n="ctc.eyebrow">Contacto</p>
+        <h2 data-reveal style="--d:80ms" data-i18n="ctc.title">Reserva tu cita</h2>
+        <p data-reveal style="--d:150ms" data-i18n="ctc.sub">Cuéntanos qué necesitas y te respondemos el mismo día.</p>
+      </div>
+
+      <div class="contact">
+        <div data-reveal="left">
+          <div class="info-list">
+            <div class="info-item">
+              <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+              <div>
+                <b data-i18n="ctc.phone">Teléfonos</b>
+                <a href="tel:+51933462410">933 462 410</a> ·
+                <a href="tel:+51974726054">974 726 054</a> ·
+                <a href="tel:+51962335240">962 335 240</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="card__ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.2 2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg></div>
+              <div><b data-i18n="ctc.wa">WhatsApp</b><a href="https://wa.me/51933462410" target="_blank" rel="noopener">+51 933 462 410</a></div>
+            </div>
+
+            <div class="info-item">
+              <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+              <div><b data-i18n="ctc.addr">Dirección</b><span data-i18n="ctc.addrv">Ilo, Moquegua · Perú</span></div>
+            </div>
+
+            <div class="info-item">
+              <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+              <div><b data-i18n="ctc.hours">Horario</b><span data-i18n="ctc.hoursv">Lun a Sáb 9:00 – 20:00 · Dom 10:00 – 14:00</span><br><span data-i18n="ctc.pickup">Recojo de prendas a partir de las 2:00 p. m.</span></div>
+            </div>
+          </div>
+
+          <div class="map-frame">
+            <iframe title="Mapa de Ilo, Moquegua" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-71.35%2C-17.66%2C-71.31%2C-17.62&amp;layer=mapnik"></iframe>
+          </div>
+        </div>
+
+        <form class="form" id="contactForm" novalidate data-reveal="right">
+          <div class="form-alert" id="formAlert" aria-live="polite"></div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="nombre"><span data-i18n="form.name">Nombre completo</span> <span class="req">*</span></label>
+              <input class="control" id="nombre" name="nombre" type="text" autocomplete="name" required
+                     placeholder="Ej. María Fernández" data-i18n-attr="placeholder:form.ph.name">
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="telefono"><span data-i18n="form.phone">Teléfono / WhatsApp</span> <span class="req">*</span></label>
+              <input class="control" id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required
+                     placeholder="Ej. 999 999 999" data-i18n-attr="placeholder:form.ph.phone">
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email"><span data-i18n="form.email">Correo electrónico</span> <small data-i18n="form.opt">(opcional)</small></label>
+              <input class="control" id="email" name="email" type="email" autocomplete="email"
+                     placeholder="tucorreo@ejemplo.com" data-i18n-attr="placeholder:form.ph.email">
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="fecha"><span data-i18n="form.date">Fecha del evento</span> <small data-i18n="form.opt">(opcional)</small></label>
+              <input class="control" id="fecha" name="fecha" type="date">
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="tipo"><span data-i18n="form.type">¿Qué necesitas?</span> <span class="req">*</span></label>
+            <select class="control" id="tipo" name="tipo" required>
+              <option value="" data-i18n="form.type0">Selecciona una opción</option>
+              <option value="vestido" data-i18n="form.type1">Alquiler de vestido</option>
+              <option value="terno" data-i18n="form.type2">Alquiler de terno</option>
+              <option value="medida" data-i18n="form.type3">Venta / confección a medida</option>
+              <option value="familiar" data-i18n="form.type4">Paquete familiar</option>
+              <option value="ninos" data-i18n="form.type5">Prendas para niños</option>
+              <option value="otro" data-i18n="form.type6">Otra consulta</option>
+            </select>
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="field">
+            <label for="mensaje"><span data-i18n="form.msg">Mensaje</span> <span class="req">*</span></label>
+            <textarea class="control" id="mensaje" name="mensaje" required
+                      placeholder="Cuéntanos la ocasión…" data-i18n-attr="placeholder:form.ph.msg"></textarea>
+            <span class="error-msg"></span>
+          </div>
+
+          <button class="btn btn--lg btn--block" id="submitBtn" type="submit">
+            <span id="submitLabel" data-i18n="form.send">Enviar consulta</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/></svg>
+          </button>
+          <p class="form-note" data-i18n="form.note">Al enviar, se abrirá WhatsApp con tu consulta lista para mandar.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Novedades Yaneth">
+          <img src="assets/img/logo-mark.svg" alt="" width="30" height="44" loading="lazy">
+          <span class="brand__txt"><span class="brand__top">Novedades</span><span class="brand__name">Yaneth</span></span>
+        </a>
+        <p style="margin-top:1rem" data-i18n="ftr.about">Boutique de alquiler y venta de vestidos y ternos en Ilo.</p>
+        <div class="socials">
+          <a href="https://wa.me/51933462410" data-net="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.2 2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg></a>
+          <a href="https://www.facebook.com/" data-net="fb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V7c0-1 .2-1.5 1.6-1.5H17V2.1C16.6 2 15.6 2 14.5 2 11.9 2 10.2 3.6 10.2 6.5V9H7.5v3.5h2.7V22H14v-9.5h2.7L17 9z"/></svg></a>
+          <a href="https://www.instagram.com/" data-net="ig" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/" data-net="tk" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2h-3v13.2a2.7 2.7 0 1 1-2.2-2.7v-3a5.7 5.7 0 1 0 5.2 5.7V9.3c1 .7 2.2 1.1 3.5 1.2v-3a4.1 4.1 0 0 1-3.5-3.6z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 data-i18n="ftr.explore">Explora</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="catalogo.html" data-i18n="nav.catalog">Catálogo</a></li>
+          <li><a href="index.html#proceso" data-i18n="nav.process">Cómo alquilar</a></li>
+          <li><a href="index.html#preguntas" data-i18n="nav.faq">Preguntas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="ftr.services">Servicios</h4>
+        <ul>
+          <li><a href="catalogo.html" data-i18n="svc.1t">Alquiler de vestidos</a></li>
+          <li><a href="catalogo.html" data-i18n="svc.3t">Ternos para caballeros</a></li>
+          <li><a href="index.html#contacto" data-i18n="svc.2t">Venta y confección a medida</a></li>
+          <li><a href="index.html#contacto" data-i18n="svc.4t">Paquete familiar</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="ftr.contact">Contacto</h4>
+        <ul>
+          <li><a href="tel:+51933462410">933 462 410</a></li>
+          <li><a href="tel:+51974726054">974 726 054</a></li>
+          <li><a href="https://wa.me/51933462410" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><span data-i18n="ctc.hoursv">Lun a Sáb 9:00 – 20:00</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Novedades Yaneth. <span data-i18n="ftr.rights">Todos los derechos reservados.</span></span>
+      <span data-i18n="ftr.made">Hecho con cariño en Ilo, Perú.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOTANTES ============ -->
+<a class="float-wa" href="https://wa.me/51933462410" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.6 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.2 2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg>
+</a>
+<button class="to-top" id="toTop" type="button" aria-label="Volver arriba" data-i18n-attr="aria-label:ftr.top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/catalogo-data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
